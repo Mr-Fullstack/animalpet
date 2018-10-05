@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title> Animal Pet </title>
+       <!--estilo, normalização e efeitos css-->
+       <link rel="stylesheet" type="text/css" href="assets/fontawesome/css/all.css" >
+       <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+       <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+       <link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
+
+	</head>
+
+	<body>
+	  <div class="jw-cad center cadastro">
+		<i class="jw-cad-close fas fa-times animated bounceIn" style="font-size:25px;margin:20px;cursor: pointer;  float: right;"></i>
+		<h1>Cadastro</h1>
+	    <form  name="cad" class="center"> 
+		 <label class="jw_name"> Digite seu nome</label>
+		 <input id="name" type="text" name="name" placeholder="seu nome" value="">
+		 <label class="jw_subname"> Digite seu Sobrenome</label>
+		 <input id="subname" type="text" name="subname" placeholder="sobrenome">
+		 <label class="jw_phone"> Digite seu Telefone</label>
+		 <input id="phone" type="text" name="tel" placeholder="telefone">
+		 <label class="jw_mail" > Digite seu email</label>
+		 <input id="mail" type="mail" name="email" placeholder="seu email" value="" required="true">
+		 <label> Escolha seu Estado</label>
+		 <select name="estado" id="">
+			  <option value="1">BA</option>
+			  <option value="0" selected disabled >Estado</option>
+		 </select>
+		 <label class="jw_city"> Escolha seu Cidade</label>
+		 <select id="city" name="cidade" id="">
+				<option value="1">Salvador</option>
+				<option value="0" selected disabled>Cidades</option>
+	     </select><br>			 
+
+		 <input class="cad-button btn" type="submit" name="enviar" value="enviar">		
+		</form>
+	  </div>	
+
+     <div class="reset-password">
+     	<i class="jw-pass-close fas fa-times animated bounceIn" style="margin-left:-20px;cursor: pointer;  float: right;"></i>
+      <form name="pass"> 
+      	  <label> Digite seu email</label>
+          <input type="email" name="email" placeholder="seu email">
+          <input type="submit" name="enviar" value="enviar">
+         
+      </form>
+     </div>
+		<content class="content">
+
+			<header class="content__header">
+				<div class="img">
+				 <img  class="header__img" src="assets/images/banner.webp">
+				    <h1>Animal Pet</h1>
+				 </div>
+				 <div class="header__login">	
+				  <label class="jw-login-open login" style="cursor: pointer; margin-left:-30px; margin-top: 150px;position: absolute;"for="login">Entrar</label>
+				 <label class="jw-cad-open login" style="cursor: pointer; margin-left:-190px; margin-top: 150px;position: absolute;"for="login">Cadastra-se</label>
+				 <i class="jw-login-close fas fa-times animated bounceIn" style="cursor: pointer;  float: right;"></i>
+				 <div class="clear"></div>
+				 <label  style="display:none;cursor: pointer;margin-left:-30px; margin-top: 150px; position: absolute;"for="login">Fechar</label>
+					<form  name="login" id="login"  class="form--login" method="POST" action="" >
+						<label class="form-text" for="mail">Email:</label><br>
+						<input type="email" name="mail" required="true" placeholder="email" /><br>
+						<label class="form-text" for="mail">Senha:</label><br>
+						<input type="password" name="password"  required="true"  placeholder="senha" /><br>
+						<span  class="reset-pass" style=" cursor:pointer; color:red ;font-size: 15px; text-decoration: underline; text-shadow: 0 0 0 ;">esqueci minha senha !</span>
+						<input type="submit" name="enviar" value="acessar">
+
+
+					</form><!--</form--login>-->
+			    </div><!--</header__login>-->
+
+			</header><!--</header>-->
+
+			<main class="content__main">
+				<section class="eventos"> Eventos </section><!--</section>-->
+				<section class="colaboradores">olaboaradores</section><!--</colaboaradores>-->
+				<section class="local">
+
+					<div class="local__img">
+						  <h1>Casa dos Animais </h1>
+                          <h3>Santo André,abc paulista</h3>
+						<img src="assets/images/cao.webp">
+					</div>
+					<div class="local__comments">
+						<div class="comments__img-profile">
+							<img src="assets/images/img.webp"><br>
+							Maria Luiza 
+							Natal/RS
+						</div>
+                        <div class="comments__comments-local">
+                        <i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<i class="fas fa-quote-right"></i></div>
+					</div>
+                    <div class="arrows">
+			        <i class=" fas fa-arrow-left "></i><i class="fas fa-arrow-right"></i>
+                    </div>
+				</section><!--</local>-->
+
+			</main><!--</main>-->	
+            <footer class="footer"> 
+            </footer><!--</footer>-->
+          
+		 </content>
+
+    <script type="text/javascript" src="assets/js/jquery.js"></script>
+    <script type="text/javascript" src="assets/js/functions.js"></script>
+	</body><!--</body>-->
+
+
+</html><!--</html>-->
