@@ -12,18 +12,25 @@
 	</head>
 
 	<body>
+
+     <audio id="audio"  src="assets/soundeffects/poupap.mp3"type="audio/mp3" autoplay="false" volume="1.0">
+
+    </audio>
+
+
+
 	  <div class="jw-cad center cadastro">
 		<i class="jw-cad-close fas fa-times animated bounceIn" style="font-size:25px;margin:20px;cursor: pointer;  float: right;"></i>
 		<h1>Cadastro</h1>
 	    <form  name="cad" class="center"> 
-		 <label class="jw_name"> Digite seu nome</label>
+		 <label class="jw_name"> Digite seu nome <i class="fas fa-check-circle" style="color:green"></i><i class="fas fa-exclamation-circle" style="color:red"></i></label>
 		 <input id="name" type="text" name="name" placeholder="seu nome" value="">
 		 <label class="jw_subname"> Digite seu Sobrenome</label>
 		 <input id="subname" type="text" name="subname" placeholder="sobrenome">
 		 <label class="jw_phone"> Digite seu Telefone</label>
 		 <input id="phone" type="text" name="tel" placeholder="telefone">
-		 <label class="jw_mail" > Digite seu email</label>
-		 <input id="mail" type="mail" name="email" placeholder="seu email" value="" required="true">
+		 <label class="jw_mail" > Digite seu email <i class="fas fa-check-circle" style="color:green"></i><i class="fas fa-exclamation-circle" style="color:red"></i></label>
+		 <input id="mail" type="mail" name="email" placeholder="seu email" value="" >
 		 <label> Escolha seu Estado</label>
 		 <select name="estado" id="">
 			  <option value="1">BA</option>
@@ -36,19 +43,22 @@
 	     </select><br>			 
 
 		 <input class="cad-button btn" type="submit" name="enviar" value="enviar">		
-		</form>
+		</form><!--formulario de cadastro-->
 	  </div>	
 
      <div class="reset-password">
-     	<i class="jw-pass-close fas fa-times animated bounceIn" style="margin-left:-20px;cursor: pointer;  float: right;"></i>
-      <form name="pass"> 
+     	
+      <form name="pass">
+
       	  <label> Digite seu email</label>
           <input type="email" name="email" placeholder="seu email">
           <input type="submit" name="enviar" value="enviar">
+           <i class="jw-pass-close fas fa-times animated bounceIn" style="z-index: 5; cursor: pointer;  "></i> 
+
          
-      </form>
+      </form><!--formulario de recuperação da senha -->
      </div>
-		<content class="content">
+		<div class="content">
 
 			<header class="content__header">
 				<div class="img">
@@ -88,16 +98,15 @@
 					<div class="local__comments">
 						<div class="comments__img-profile">
 							<img src="assets/images/img.webp"><br>
-							Maria Luiza 
-							Natal/RS
+							<span class="perfil-name">Maria Luiza 
+							Natal/RS</span>
 						</div>
                         <div class="comments__comments-local">
-                        <i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<i class="fas fa-quote-right"></i></div>
+                        <i class="fas fa-quote-left"></i> “Conjunto de palavras e frases articuladas, escritas sobre qualquer suporte”[1].
+
+“Obra escrita considerada na sua redação original e autêntica (por oposição a sumário, tradução, notas, comentários, etc.)”[2].
+
+"Um texto é uma ocorrência linguística, escrita ou falada de qualquer extensão, dotada de unidade sociocomunicativa, semântica e formal. É uma unidade de linguagem em uso."[.<i class="fas fa-quote-right"></i></div>
 					</div>
                     <div class="arrows">
 			        <i class=" fas fa-arrow-left "></i><i class="fas fa-arrow-right"></i>
@@ -108,10 +117,15 @@
             <footer class="footer"> 
             </footer><!--</footer>-->
           
-		 </content>
+		 </div><!--</content>-->
 
     <script type="text/javascript" src="assets/js/jquery.js"></script>
     <script type="text/javascript" src="assets/js/functions.js"></script>
+    <script type="text/javascript">
+
+ 
+
+</script>
 	</body><!--</body>-->
 
 
