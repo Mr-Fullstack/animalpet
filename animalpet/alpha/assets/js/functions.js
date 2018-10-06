@@ -1,7 +1,18 @@
 $(function(){ //ABRINDO A FUNCTION MAIN
 
+var audio = document.getElementById('audio');
+  
+  
+function playAudio() { 
+    audio.play(); 
+} 
 /*-------------------------------------------------------*/
 /*CÓDIGOS DO LOGIN */
+$('.jw_name > .fa-exclamation-circle').hide();
+$('.jw_name >.fa-check-circle').hide();
+
+$('.jw_mail > .fa-exclamation-circle').hide();
+$('.jw_mail >.fa-check-circle').hide();
 
 $('.reset-password').hide();
 $('.form--login').hide();
@@ -35,14 +46,19 @@ $('.form--login').fadeOut("slow").removeClass( "animated fliIntY" ).addClass("an
 
 /* código que abrir a area de  reset pass */
 $('.reset-pass').click(function(){
-$('.reset-password').fadeIn("slow").removeClass('animated zoomOut').addClass('animated slideInDown');
+$('.content ').css({"filter": "blur(10px)"});
+$('.reset-password').fadeIn("slow").removeClass('animated zoomOut').addClass('animated bounceIn');
 $('.jw-pass-close ').fadeIn("slow");
+
+playAudio();
+
 });/*close do abrir reset pass*/
 
 /* código que fechar a area de  reset pass */
 $('.jw-pass-close ').click(function(){
+$('.content ').css({"filter": "blur(0px)"});	
 $('form[name="pass"]')[0].reset();
-$('.reset-password').fadeOut("slow").removeClass('animated slideInDown').addClass('animated zoomOut');
+$('.reset-password').fadeOut("slow").removeClass('animated bounceIn').addClass('animated zoomOut');
 $('.jw-pass-close ').fadeOut("slow");	
 });/*close do fechar reset pass*/
 
@@ -52,6 +68,7 @@ $('.jw-pass-close ').fadeOut("slow");
 $('.jw-cad').hide();	
 /* código que que abri a area de cadastro */
 $('.jw-cad-open').click(function(){
+$('.content ').css({"filter": "blur(10px)"});
 $('.jw-login-close ').fadeOut("slow");	
 $('.reset-password').fadeOut("slow").removeClass('animated zoomIn').addClass('animated zoomOut');
 $('.form--login').fadeOut("slow").removeClass( "animated fliIntY" ).addClass("animated flipOutY");
@@ -59,6 +76,7 @@ $('.jw-cad').fadeIn("slow").removeClass('animated zoomOut').addClass('animated z
 
 /* código que que fechar a area de cadastro */
 $('.jw-cad-close').click(function(){
+$('.content ').css({"filter": "blur(0px)"});	
 $('.jw-login-open').fadeIn('slow');
 $('form[name="cad"]')[0].reset();
 $('.jw-cad').fadeOut("slow").removeClass('animated zoomIn').addClass('animated zoomOut');	
@@ -73,6 +91,8 @@ var valuenome=$('#name').val();
 
 
 $('#name').focusin(function(){
+$('.jw_name > .fa-exclamation-circle').fadeOut("slow");
+
 
 $('.jw_name').css({"color":"#4caf50"});
 
@@ -87,10 +107,13 @@ var valuenomeatual= $('#name').keyup(function(){
  })
 
 if(valuenomeatual.val() == valuenome ){
-	alert('nome em branco'); 
-$('.jw_name').css({"color":"red"});}
-
-else{$('.jw_name').css({"color":"green"}); }
+	
+$('.jw_name').delay(700).css({"color":"red"});
+$('.jw_name > .fa-exclamation-circle').delay(500).fadeIn("slow");
+$('.jw_name > .fa-check-circle').fadeOut("slow");
+}
+else{$('.jw_name').css({"color":"green"});
+$('.jw_name > .fa-check-circle').fadeIn('slow'); }
 
 });
 
@@ -122,7 +145,7 @@ var valuemail=$('#mail').val();
 
 $('#mail').focusin(function(){
 
-
+$('.jw_mail >.fa-exclamation-circle').fadeOut("slow");
 $('.jw_mail').css({"color":"#4caf50"});
 
 });
@@ -136,12 +159,17 @@ $('#mail').focusout(function(){
  })
 
 if(mailvalueatual.val() == valuemail ){
-	alert('email em branco'); 
-$('.jw_mail').css({"color":"red"});}
-
-else{$('.jw_mail').css({"color":"green"}); }
-
 	
+$('.jw_mail > .fa-exclamation-circle').delay(500).fadeIn("slow");	
+$('.jw_mail').delay(500).css({"color":"red"});
+$('.jw_mail >.fa-check-circle').fadeOut("slow");}
+
+else{$('.jw_mail').css({"color":"green"});
+$('.jw_mail >.fa-check-circle').fadeIn("slow");
+
+}
+
+
 });
 
 /*IDADE*/
@@ -154,6 +182,10 @@ $('.jw_city').css({"color":"#ccc"});
 });
 
 });
+
+
+
+
 
 /*--------------------------
 -----------------------------*/
